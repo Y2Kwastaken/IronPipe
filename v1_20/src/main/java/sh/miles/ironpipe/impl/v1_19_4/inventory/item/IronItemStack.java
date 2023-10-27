@@ -39,7 +39,7 @@ public class IronItemStack implements ItemStack {
     }
 
     @Override
-    public void setName(final BaseComponent @NotNull ... component) {
+    public void setName(@NotNull final BaseComponent ... component) {
         minecraft.setHoverName(ComponentUtils.toMinecraftChat(component));
     }
 

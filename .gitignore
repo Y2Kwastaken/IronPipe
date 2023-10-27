@@ -41,3 +41,5 @@ build/
 .idea/
 
 *.versionsBackup
+
+iron-pipe/dependency-reduced-pom.xml
