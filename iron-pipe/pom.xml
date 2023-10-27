@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>sh.miles.suketto</groupId>
+        <artifactId>suketto-parent</artifactId>
+        <version>2023.10.5</version>
+    </parent>
+
+    <artifactId>suketto</artifactId>
+    <packaging>jar</packaging>
+    <version>2023.10.5</version>
+
+    <repositories>
+        <repository>
+            <id>minebench-repo</id>
+            <url>https://repo.minebench.de/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>sh.miles.suketto</groupId>
+            <artifactId>core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>sh.miles.suketto</groupId>
+            <artifactId>nms-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>sh.miles.suketto</groupId>
+            <artifactId>bukkit-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>sh.miles.suketto</groupId>
+            <artifactId>v1_20_1</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>sh.miles.suketto</groupId>
+            <artifactId>v1_20_2</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.themoep</groupId>
+            <artifactId>minedown</artifactId>
+            <version>1.7.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <!--<profiles>
+        <profile>
+            <id>1.20.1-nms</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>sh.miles.suketto</groupId>
+                    <artifactId>v1_20_1</artifactId>
+                    <version>2023.10.5</version>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>1.20.2-nms</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>sh.miles.suketto</groupId>
+                    <artifactId>v1_20_2</artifactId>
+                    <version>2023.10.5</version>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>-->
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>${maven-shade-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
