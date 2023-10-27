@@ -91,36 +91,6 @@
                     <artifactId>maven-jar-plugin</artifactId>
                     <version>${maven-jar-plugin.version}</version>
                 </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>${maven-javadoc-plugin.version}</version>
-                    <configuration>
-                        <links>
-                            <link>https://hub.spigotmc.org/javadocs/bukkit/</link>
-                            <link>https://docs.oracle.com/en/java/javase/17/docs/api/</link>
-                        </links>
-                        <linksource>true</linksource>
-                        <quiet>true</quiet>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>attach-javadocs</id>
-                            <goals>
-                                <goal>jar</goal>
-                            </goals>
-                            <configuration> <!-- add this to disable checking -->
-                                <failOnError>true</failOnError>
-                                <failOnWarnings>false</failOnWarnings>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-shade-plugin</artifactId>
-                    <version>${maven-shade-plugin.version}</version>
-                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>

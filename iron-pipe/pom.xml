@@ -30,7 +30,7 @@
 
     <profiles>
         <profile>
-            <id>1.19.4-nms</id>
+            <id>1.19.4</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -43,7 +43,7 @@
             </dependencies>
         </profile>
         <profile>
-            <id>1.20-nms</id>
+            <id>1.20</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -56,7 +56,7 @@
             </dependencies>
         </profile>
         <profile>
-            <id>1.20.1-nms</id>
+            <id>1.20.1</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -69,7 +69,7 @@
             </dependencies>
         </profile>
         <profile>
-            <id>1.20.2-nms</id>
+            <id>1.20.2</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -97,6 +97,16 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <filters>
+                        <filter>
+                            <artifact>sh.miles.ironpipe:*</artifact>
+                            <excludes>
+                                <exclude>META-INF/*.MF</exclude>
+                            </excludes>
+                        </filter>
+                    </filters>
+                </configuration>
             </plugin>
         </plugins>
     </build>
