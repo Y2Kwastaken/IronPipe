@@ -1,4 +1,4 @@
-package sh.miles.ironpipe.impl.v1_20.inventory.item;
+package sh.miles.ironpipe.impl.v1_19_4.inventory.item;
 
 import com.google.common.base.Preconditions;
 import net.md_5.bungee.api.chat.BaseComponent;
@@ -9,16 +9,16 @@ import net.minecraft.nbt.StringTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import org.bukkit.Material;
-import org.bukkit.craftbukkit.v1_20_R1.entity.CraftPlayer;
-import org.bukkit.craftbukkit.v1_20_R1.inventory.CraftItemStack;
-import org.bukkit.craftbukkit.v1_20_R1.util.CraftMagicNumbers;
-import org.bukkit.craftbukkit.v1_20_R1.util.CraftNamespacedKey;
+import org.bukkit.craftbukkit.v1_19_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_19_R3.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_19_R3.util.CraftMagicNumbers;
+import org.bukkit.craftbukkit.v1_19_R3.util.CraftNamespacedKey;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import sh.miles.ironpipe.api.inventory.item.ItemStack;
 import sh.miles.ironpipe.api.inventory.item.ToolTip;
-import sh.miles.ironpipe.impl.v1_20.internal.ComponentUtils;
+import sh.miles.ironpipe.impl.v1_19_4.internal.ComponentUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;

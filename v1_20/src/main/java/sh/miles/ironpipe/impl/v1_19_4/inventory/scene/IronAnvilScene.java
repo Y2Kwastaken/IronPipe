@@ -1,4 +1,4 @@
-package sh.miles.ironpipe.impl.v1_20.inventory.scene;
+package sh.miles.ironpipe.impl.v1_19_4.inventory.scene;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.inventory.AnvilMenu;

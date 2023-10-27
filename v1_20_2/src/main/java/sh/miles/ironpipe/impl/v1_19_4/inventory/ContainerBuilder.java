@@ -1,4 +1,4 @@
-package sh.miles.ironpipe.impl.v1_20.inventory;
+package sh.miles.ironpipe.impl.v1_19_4.inventory;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

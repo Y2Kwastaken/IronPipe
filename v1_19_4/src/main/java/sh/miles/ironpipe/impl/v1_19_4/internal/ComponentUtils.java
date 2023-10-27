@@ -1,11 +1,11 @@
-package sh.miles.ironpipe.impl.v1_20.internal;
+package sh.miles.ironpipe.impl.v1_19_4.internal;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonParser;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.chat.ComponentSerializer;
 import net.minecraft.network.chat.Component;
-import org.bukkit.craftbukkit.v1_20_R1.util.CraftChatMessage;
+import org.bukkit.craftbukkit.v1_19_R3.util.CraftChatMessage;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.invoke.MethodHandle;

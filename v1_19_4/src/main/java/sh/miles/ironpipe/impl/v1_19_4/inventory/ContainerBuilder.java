@@ -1,4 +1,4 @@
-package sh.miles.ironpipe.impl.v1_20.inventory;
+package sh.miles.ironpipe.impl.v1_19_4.inventory;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -19,7 +19,7 @@ import net.minecraft.world.level.block.entity.BlastFurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.FurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.SmokerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import org.bukkit.craftbukkit.v1_20_R1.entity.CraftHumanEntity;
+import org.bukkit.craftbukkit.v1_19_R3.entity.CraftHumanEntity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,7 +37,7 @@ public class ContainerBuilder {
         this.builder.put(MenuType.SMOKER, ContainerProvider.tile(SmokerBlockEntity::new, Blocks.SMOKER));
         this.builder.put(MenuType.BLAST_FURNACE, ContainerProvider.tile(BlastFurnaceBlockEntity::new, Blocks.BLAST_FURNACE));
         this.builder.put(MenuType.ENCHANTMENT, (player, inventory) -> new SimpleMenuProvider(
-                        (syncId, playerinventory, human) -> new EnchantmentMenu(syncId, playerinventory, ContainerLevelAccess.create(human.level(), human.blockPosition())),
+                        (syncId, playerinventory, human) -> new EnchantmentMenu(syncId, playerinventory, ContainerLevelAccess.create(human.level, human.blockPosition())),
                         Component.empty()
                 ).createMenu(player.nextContainerCounter(), inventory, player)
         );
@@ -59,7 +59,7 @@ public class ContainerBuilder {
         }
 
         static ContainerProvider worldAccess(ContainerAccessMenu menu) {
-            return (player, inventory) -> menu.build(player.nextContainerCounter(), inventory, ContainerLevelAccess.create(player.level(), player.blockPosition()));
+            return (player, inventory) -> menu.build(player.nextContainerCounter(), inventory, ContainerLevelAccess.create(player.level, player.blockPosition()));
         }
     }
 

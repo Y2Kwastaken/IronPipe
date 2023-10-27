@@ -1,4 +1,4 @@
-package sh.miles.ironpipe.impl.v1_20.internal;
+package sh.miles.ironpipe.impl.v1_19_4.internal;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonParser;

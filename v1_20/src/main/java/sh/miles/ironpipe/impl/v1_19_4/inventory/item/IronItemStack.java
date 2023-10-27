@@ -1,4 +1,4 @@
-package sh.miles.ironpipe.impl.v1_20.inventory.item;
+package sh.miles.ironpipe.impl.v1_19_4.inventory.item;
 
 import com.google.common.base.Preconditions;
 import net.md_5.bungee.api.chat.BaseComponent;
@@ -18,7 +18,7 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import sh.miles.ironpipe.api.inventory.item.ItemStack;
 import sh.miles.ironpipe.api.inventory.item.ToolTip;
-import sh.miles.ironpipe.impl.v1_20.internal.ComponentUtils;
+import sh.miles.ironpipe.impl.v1_19_4.internal.ComponentUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;

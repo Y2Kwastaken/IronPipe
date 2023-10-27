@@ -1,4 +1,4 @@
-package sh.miles.ironpipe.impl.v1_20;
+package sh.miles.ironpipe.impl.v1_19_4;
 
 import net.md_5.bungee.api.chat.BaseComponent;
 import org.bukkit.entity.HumanEntity;
@@ -7,7 +7,7 @@ import sh.miles.ironpipe.api.Pipe;
 import sh.miles.ironpipe.api.internal.PipeUnsafe;
 import sh.miles.ironpipe.api.inventory.ContainerType;
 import sh.miles.ironpipe.api.inventory.scene.ContainerScene;
-import sh.miles.ironpipe.impl.v1_20.internal.IronPipeUnsafe;
+import sh.miles.ironpipe.impl.v1_19_4.internal.IronPipeUnsafe;
 
 public class IronPipe implements Pipe {
 

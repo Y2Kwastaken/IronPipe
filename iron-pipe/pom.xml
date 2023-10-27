@@ -4,14 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>sh.miles.suketto</groupId>
-        <artifactId>suketto-parent</artifactId>
-        <version>2023.10.5</version>
+        <groupId>sh.miles.ironpipe</groupId>
+        <artifactId>IronPipe-Parent</artifactId>
+        <version>2023.10.27</version>
     </parent>
 
-    <artifactId>suketto</artifactId>
+    <artifactId>iron-pipe</artifactId>
     <packaging>jar</packaging>
-    <version>2023.10.5</version>
+    <version>2023.10.27</version>
 
     <repositories>
         <repository>
@@ -22,38 +22,39 @@
 
     <dependencies>
         <dependency>
-            <groupId>sh.miles.suketto</groupId>
-            <artifactId>core</artifactId>
+            <groupId>sh.miles.ironpipe</groupId>
+            <artifactId>api</artifactId>
             <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>sh.miles.suketto</groupId>
-            <artifactId>nms-api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>sh.miles.suketto</groupId>
-            <artifactId>bukkit-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>sh.miles.suketto</groupId>
-            <artifactId>v1_20_1</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>sh.miles.suketto</groupId>
-            <artifactId>v1_20_2</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>de.themoep</groupId>
-            <artifactId>minedown</artifactId>
-            <version>1.7.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
-    <!--<profiles>
+    <profiles>
+        <profile>
+            <id>1.19.4-nms</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>sh.miles.ironpipe</groupId>
+                    <artifactId>v1_19_4</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>1.20-nms</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>sh.miles.ironpipe</groupId>
+                    <artifactId>v1_20</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
+            </dependencies>
+        </profile>
         <profile>
             <id>1.20.1-nms</id>
             <activation>
@@ -61,9 +62,9 @@
             </activation>
             <dependencies>
                 <dependency>
-                    <groupId>sh.miles.suketto</groupId>
+                    <groupId>sh.miles.ironpipe</groupId>
                     <artifactId>v1_20_1</artifactId>
-                    <version>2023.10.5</version>
+                    <version>${project.version}</version>
                 </dependency>
             </dependencies>
         </profile>
@@ -74,13 +75,13 @@
             </activation>
             <dependencies>
                 <dependency>
-                    <groupId>sh.miles.suketto</groupId>
+                    <groupId>sh.miles.ironpipe</groupId>
                     <artifactId>v1_20_2</artifactId>
-                    <version>2023.10.5</version>
+                    <version>${project.version}</version>
                 </dependency>
             </dependencies>
         </profile>
-    </profiles>-->
+    </profiles>
 
     <build>
         <plugins>

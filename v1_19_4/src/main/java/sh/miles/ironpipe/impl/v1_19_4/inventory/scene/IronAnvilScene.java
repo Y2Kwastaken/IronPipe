@@ -1,9 +1,9 @@
-package sh.miles.ironpipe.impl.v1_20.inventory.scene;
+package sh.miles.ironpipe.impl.v1_19_4.inventory.scene;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.inventory.AnvilMenu;
 import net.minecraft.world.inventory.Slot;
-import org.bukkit.craftbukkit.v1_20_R1.inventory.CraftInventoryView;
+import org.bukkit.craftbukkit.v1_19_R3.inventory.CraftInventoryView;
 import sh.miles.ironpipe.api.inventory.scene.AnvilScene;
 
 public class IronAnvilScene extends IronContainerScene<AnvilMenu> implements AnvilScene {
