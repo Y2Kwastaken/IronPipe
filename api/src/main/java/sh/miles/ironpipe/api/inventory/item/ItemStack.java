@@ -1,9 +1,11 @@
 package sh.miles.ironpipe.api.inventory.item;
 
 import net.md_5.bungee.api.chat.BaseComponent;
+import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
+import sh.miles.ironpipe.loader.IronPipe;
 
 import java.util.List;
 import java.util.Map;
@@ -12,6 +14,8 @@ import java.util.Map;
  * an Item that can be used
  */
 public interface ItemStack {
+
+    static ItemStack AIR = IronPipe.getUnsafe().newItem(Material.AIR);
 
     /**
      * @return the name of the item
@@ -61,8 +65,8 @@ public interface ItemStack {
     Map<Enchantment, Short> getEnchantments();
 
     /**
-     * Gets whether the item is enchantable within the vanilla game. Note, if the item is not enchantable within the
-     * vanilla game that does not mean that the item can not be enchanted
+     * Gets whether the item is enchantable within the vanilla game. Note, if the item is not enchantable within the vanilla game that does not
+     * mean that the item can not be enchanted
      *
      * @return true if the item is enchantable within the vanilla game, otherwise false
      */
@@ -97,6 +101,7 @@ public interface ItemStack {
 
     /**
      * Hides a tooltip on this item
+     *
      * @param tooltip the tooltip to hide
      */
     void hideToolTip(ToolTip tooltip);
@@ -119,6 +124,12 @@ public interface ItemStack {
      * @return the count of this item
      */
     byte getCount();
+
+    /**
+     * @return a copy of this item
+     */
+    @NotNull
+    ItemStack copy();
 
     /**
      * @return the bukkit item stack

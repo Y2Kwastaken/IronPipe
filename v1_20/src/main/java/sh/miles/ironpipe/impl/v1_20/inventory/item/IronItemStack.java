@@ -33,13 +33,17 @@ public class IronItemStack implements ItemStack {
         minecraft = new net.minecraft.world.item.ItemStack(CraftMagicNumbers.getItem(bukkit));
     }
 
+    public IronItemStack(net.minecraft.world.item.ItemStack minecraft) {
+        this.minecraft = minecraft.copy();
+    }
+
     @Override
     public @NotNull BaseComponent getName() {
         return ComponentUtils.toBungeeChat(minecraft.getHoverName());
     }
 
     @Override
-    public void setName(@NotNull final BaseComponent ... component) {
+    public void setName(@NotNull final BaseComponent... component) {
         minecraft.setHoverName(ComponentUtils.toMinecraftChat(component));
     }
 
@@ -151,6 +155,12 @@ public class IronItemStack implements ItemStack {
     @Override
     public byte getCount() {
         return (byte) minecraft.getCount();
+    }
+
+    @NotNull
+    @Override
+    public ItemStack copy() {
+        return new IronItemStack(minecraft);
     }
 
     @NotNull

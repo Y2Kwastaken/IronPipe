@@ -4,6 +4,7 @@ import net.md_5.bungee.api.chat.BaseComponent;
 import org.bukkit.Keyed;
 import org.bukkit.entity.HumanEntity;
 import org.jetbrains.annotations.NotNull;
+import sh.miles.ironpipe.api.inventory.item.ItemStack;
 import sh.miles.ironpipe.api.inventory.scene.AnvilScene;
 import sh.miles.ironpipe.api.inventory.scene.ContainerScene;
 import sh.miles.ironpipe.loader.IronPipe;
@@ -60,6 +61,6 @@ public interface ContainerType<T extends ContainerScene> extends Keyed {
 
     @SuppressWarnings("unchecked")
     private static <T extends ContainerScene> ContainerType<T> get(String id) {
-        return (ContainerType<T>) IronPipe.getInstance().getUnsafe().getContainer(id);
+        return (ContainerType<T>) IronPipe.getUnsafe().getContainer(id);
     }
 }

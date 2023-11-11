@@ -39,6 +39,7 @@
                     <groupId>sh.miles.ironpipe</groupId>
                     <artifactId>v1_19_4</artifactId>
                     <version>${project.version}</version>
+                    <scope>compile</scope>
                 </dependency>
             </dependencies>
         </profile>
@@ -52,6 +53,7 @@
                     <groupId>sh.miles.ironpipe</groupId>
                     <artifactId>v1_20</artifactId>
                     <version>${project.version}</version>
+                    <scope>compile</scope>
                 </dependency>
             </dependencies>
         </profile>
@@ -65,6 +67,7 @@
                     <groupId>sh.miles.ironpipe</groupId>
                     <artifactId>v1_20_1</artifactId>
                     <version>${project.version}</version>
+                    <scope>compile</scope>
                 </dependency>
             </dependencies>
         </profile>
@@ -78,37 +81,13 @@
                     <groupId>sh.miles.ironpipe</groupId>
                     <artifactId>v1_20_2</artifactId>
                     <version>${project.version}</version>
+                    <scope>compile</scope>
                 </dependency>
             </dependencies>
         </profile>
     </profiles>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>${maven-shade-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <filters>
-                        <filter>
-                            <artifact>sh.miles.ironpipe:*</artifact>
-                            <excludes>
-                                <exclude>META-INF/*.MF</exclude>
-                            </excludes>
-                        </filter>
-                    </filters>
-                </configuration>
-            </plugin>
-        </plugins>
     </build>
 
 </project>
