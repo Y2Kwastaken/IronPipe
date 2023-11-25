@@ -1,7 +1,10 @@
 package sh.miles.ironpipe.loader;
 
 import net.md_5.bungee.api.chat.BaseComponent;
+import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.World;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -10,11 +13,14 @@ import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import sh.miles.ironpipe.api.Pipe;
+import sh.miles.ironpipe.api.entity.PipeEntity;
 import sh.miles.ironpipe.api.internal.PipeUnsafe;
 import sh.miles.ironpipe.api.inventory.ContainerType;
 import sh.miles.ironpipe.api.inventory.item.ItemStack;
 import sh.miles.ironpipe.api.inventory.scene.ContainerScene;
 import sh.miles.ironpipe.loader.internal.ReflectionUtils;
+
+import java.util.function.Consumer;
 
 /**
  * Provides API for IronPipe
@@ -73,8 +79,8 @@ public final class IronPipe {
     }
 
     /**
-     * Opens an inventory with a base component title. Note this implementation uses CraftContainer so Inventories opened in this way will not
-     * work as intended
+     * Opens an inventory with a base component title. Note this implementation uses CraftContainer so Inventories
+     * opened in this way will not work as intended
      *
      * @param player    the player
      * @param inventory the inventory to open
@@ -82,10 +88,22 @@ public final class IronPipe {
      * @return the legacy bukkit inventory view associated with this task
      */
     @Nullable
-    InventoryView openInventory(@NotNull final Player player, @NotNull final Inventory inventory, @NotNull BaseComponent... title) {
+    public static InventoryView openInventory(@NotNull final Player player, @NotNull final Inventory inventory, @NotNull BaseComponent... title) {
         return pipe.openInventory(player, inventory, title);
     }
 
+    /**
+     * Spawns an entity within the world at the specified locations and executes a specific set of modifications before
+     * adding it to the world
+     *
+     * @param world         the world to spawn the entity in
+     * @param location      the location to spawn the entity at
+     * @param clazz         the class type of the entity
+     * @param modifications the modifications to make before spawning it in
+     */
+    public static <T extends Entity> void spawnEntity(@NotNull final World world, @NotNull final Location location, Class<T> clazz, Consumer<PipeEntity> modifications) {
+        pipe.spawnEntity(world, location, clazz, modifications);
+    }
 
     /**
      * Creates a new item stack
