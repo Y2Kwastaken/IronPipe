@@ -85,7 +85,7 @@ public interface Pipe {
      * @param clazz         the class type of the entity
      * @param modifications the modifications to make before spawning it in
      */
-    <T extends Entity> void spawnEntity(@NotNull final World world, @NotNull final Location location, Class<T> clazz, Consumer<PipeEntity> modifications);
+    <T extends Entity> T spawnEntity(@NotNull final World world, @NotNull final Location location, Class<T> clazz, Consumer<PipeEntity> modifications);
 
     /**
      * Creates a new item stack

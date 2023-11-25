@@ -75,8 +75,8 @@ public class IronPipe implements Pipe {
     }
 
     @Override
-    public <T extends Entity> void spawnEntity(@NotNull final World world, @NotNull final Location location, final Class<T> clazz, final Consumer<PipeEntity> modifications) {
-        world.spawn(location, clazz, (T entity) -> {
+    public <T extends Entity> T spawnEntity(@NotNull final World world, @NotNull final Location location, final Class<T> clazz, final Consumer<PipeEntity> modifications) {
+        return world.spawn(location, clazz, (T entity) -> {
             modifications.accept(EntityHandler.INSTANCE.build(entity));
         });
     }

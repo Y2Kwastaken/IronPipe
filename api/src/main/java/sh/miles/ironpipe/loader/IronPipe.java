@@ -101,8 +101,8 @@ public final class IronPipe {
      * @param clazz         the class type of the entity
      * @param modifications the modifications to make before spawning it in
      */
-    public static <T extends Entity> void spawnEntity(@NotNull final World world, @NotNull final Location location, Class<T> clazz, Consumer<PipeEntity> modifications) {
-        pipe.spawnEntity(world, location, clazz, modifications);
+    public static <T extends Entity> T spawnEntity(@NotNull final World world, @NotNull final Location location, Class<T> clazz, Consumer<PipeEntity> modifications) {
+        return pipe.spawnEntity(world, location, clazz, modifications);
     }
 
     /**
