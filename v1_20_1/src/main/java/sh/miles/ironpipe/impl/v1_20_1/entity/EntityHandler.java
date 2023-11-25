@@ -23,7 +23,7 @@ public final class EntityHandler {
 
     @Nullable
     public PipeEntity build(@NotNull final Entity bukkit) {
-        Function<Entity, PipeEntity> function = builder.get(builder.getClass());
+        Function<Entity, PipeEntity> function = builder.get(bukkit.getClass());
         if (function == null) {
             return null;
         }
