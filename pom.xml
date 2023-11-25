@@ -12,7 +12,6 @@
         <module>api</module>
         <module>iron-pipe</module>
         <module>v1_19_4</module>
-        <module>v1_20</module>
         <module>v1_20_1</module>
         <module>v1_20_2</module>
     </modules>

@@ -44,20 +44,6 @@
             </dependencies>
         </profile>
         <profile>
-            <id>1.20</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <dependencies>
-                <dependency>
-                    <groupId>sh.miles.ironpipe</groupId>
-                    <artifactId>v1_20</artifactId>
-                    <version>${project.version}</version>
-                    <scope>compile</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
             <id>1.20.1</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
