@@ -5,12 +5,12 @@
     <parent>
         <groupId>sh.miles.ironpipe</groupId>
         <artifactId>IronPipe-Parent</artifactId>
-        <version>2023.10.27</version>
+        <version>1.2.0</version>
     </parent>
 
     <artifactId>v1_20_4</artifactId>
     <packaging>jar</packaging>
-    <version>2023.10.27</version>
+    <version>1.2.0</version>
 
     <repositories>
         <repository>
