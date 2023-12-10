@@ -5,6 +5,8 @@ import net.md_5.bungee.api.chat.BaseComponent;
 /**
  * Represents an entity equivalent to {@link org.bukkit.entity.TextDisplay} that displays text from the source of an
  * entity within the world
+ *
+ * @since 1.0.1
  */
 public interface TextDisplay extends PipeEntity {
 

@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
  * Similar in function to {@link InventoryView}, all children provide useful functions for changing data that should
  * otherwise be managed within the InventoryView
  *
- * @since 2023.10.22
+ * @since 1.0.0
  */
 public interface ContainerScene {
 

@@ -25,9 +25,8 @@ import java.util.function.Consumer;
 /**
  * Provides API for IronPipe
  *
- * @since 2023.10.22
+ * @since 1.0.0
  */
-@ApiStatus.AvailableSince("2023.10.22")
 public final class IronPipe {
 
     private static final String PATH = "sh.miles.ironpipe.impl.%s.%s%s";

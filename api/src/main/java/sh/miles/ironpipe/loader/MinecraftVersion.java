@@ -8,6 +8,8 @@ import java.util.Objects;
 
 /**
  * A class that represents a minecraft version
+ *
+ * @since 1.0.0
  */
 public class MinecraftVersion {
 
@@ -17,9 +19,8 @@ public class MinecraftVersion {
 
     public static final MinecraftVersion CURRENT;
     public static final MinecraftVersion v1_19_4 = new MinecraftVersion(1, 19, 4);
-    public static final MinecraftVersion v1_20 = new MinecraftVersion(1, 20);
-    public static final MinecraftVersion V1_20_1 = new MinecraftVersion(1, 20, 1);
     public static final MinecraftVersion V1_20_2 = new MinecraftVersion(1, 20, 2);
+    public static final MinecraftVersion V1_20_4 = new MinecraftVersion(1, 20, 4);
 
     static {
         String[] split = Bukkit.getBukkitVersion().split("-")[0].split("\\.");

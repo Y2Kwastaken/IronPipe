@@ -3,7 +3,7 @@ package sh.miles.ironpipe.api.inventory.scene;
 /**
  * A Scene which provides data on an Anvil
  *
- * @since 2023.10.22
+ * @since 1.0.0
  */
 public interface AnvilScene extends ContainerScene {
 

@@ -8,7 +8,7 @@ import sh.miles.ironpipe.api.inventory.item.ItemStack;
 /**
  * An unstable internal class
  *
- * @since 2023.10.22
+ * @since 1.0.0
  */
 @ApiStatus.Internal
 public interface PipeUnsafe {

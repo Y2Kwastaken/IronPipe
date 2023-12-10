@@ -13,7 +13,7 @@ import sh.miles.ironpipe.loader.IronPipe;
  * Represents a container that can be created and viewed by a player
  *
  * @param <T> the container scene
- * @since 2023.10.22
+ * @since 1.0.0
  */
 public interface ContainerType<T extends ContainerScene> extends Keyed {
     ContainerType<ContainerScene> GENERIC_9x1 = get("generic_9x1");

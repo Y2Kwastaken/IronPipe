@@ -8,6 +8,8 @@ import java.lang.annotation.Target;
 
 /**
  * Used in other libraries to specify what does and doesn't require iron pipe
+ *
+ * @since 1.0.0
  */
 @Inherited
 @Retention(RetentionPolicy.SOURCE)

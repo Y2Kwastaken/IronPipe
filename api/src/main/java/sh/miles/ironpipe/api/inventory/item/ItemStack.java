@@ -12,6 +12,8 @@ import java.util.Map;
 
 /**
  * an Item that can be used
+ *
+ * @since 1.0.1
  */
 public interface ItemStack {
 
@@ -65,8 +67,8 @@ public interface ItemStack {
     Map<Enchantment, Short> getEnchantments();
 
     /**
-     * Gets whether the item is enchantable within the vanilla game. Note, if the item is not enchantable within the vanilla game that does not
-     * mean that the item can not be enchanted
+     * Gets whether the item is enchantable within the vanilla game. Note, if the item is not enchantable within the
+     * vanilla game that does not mean that the item can not be enchanted
      *
      * @return true if the item is enchantable within the vanilla game, otherwise false
      */
